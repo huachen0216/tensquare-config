@@ -1,0 +1,26 @@
+server:
+  port: 9011
+spring:
+  application:
+    name: tensquare_manager
+jwt:
+  config:
+    key: fathua
+    ttl: 3600000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6868/eureka
+  instance:
+    prefer-ip-address: true #支持跨域访问
+zuul:
+  routes:
+    tensquare-base:
+      path: /base/**
+      serviceId: tensquare-base
+    tensquare-user:
+      path: /user/**
+      serviceId: tensquare-user
+    tensquare-qa:
+      path: /qa/**
+      serviceId: tensquare-qa
