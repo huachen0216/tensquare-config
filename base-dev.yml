@@ -19,4 +19,4 @@ eureka:
       defaultZone: http://localhost:6868/eureka
   instance:
     prefer-ip-address: true #支持跨域访问
-ip: localhost威风威风威风威风
+ip: localhost----------------
