@@ -1,5 +1,5 @@
 server:
-  port: 9011
+port: 9011
 spring:
   application:
     name: tensquare_manager
@@ -15,12 +15,42 @@ eureka:
     prefer-ip-address: true #支持跨域访问
 zuul:
   routes:
+    tensquare-article:
+      path: /article/**
+      serviceId: tensquare-article
     tensquare-base:
       path: /base/**
       serviceId: tensquare-base
-    tensquare-user:
-      path: /user/**
-      serviceId: tensquare-user
+    tensquare-eureka:
+      path: /eureka/**
+      serviceId: tensquare-eureka 
+    tensquare-friend:
+      path: /friend/**
+      serviceId: tensquare-friend
+    tensquare-gathering:
+      path: /gathering/**
+      serviceId: tensquare-gathering
+    tensquare-manager:
+      path: /manager/**
+      serviceId: tensquare-manager
     tensquare-qa:
       path: /qa/**
       serviceId: tensquare-qa
+    tensquare-recruit:
+      path: /recruit/**
+      serviceId: tensquare-recruit
+    tensquare-search:
+      path: /search/**
+      serviceId: tensquare-search
+    tensquare-sms:
+      path: /sms/**
+      serviceId: tensquare-sms
+    tensquare-spit:
+      path: /spit/**
+      serviceId: tensquare-spit
+    tensquare-user:
+      path: /user/**
+      serviceId: tensquare-user
+    tensquare-web:
+      path: /web/**
+      serviceId: tensquare-web
